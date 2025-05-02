@@ -5,7 +5,25 @@
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
   <url>
-    <loc>https://liushihowe.github.io/post/</loc>
+    <loc>http://localhost:1313/post/first/</loc>
+    
+    <lastmod>2025-04-29T22:11:26+08:00</lastmod>
+    
+    
+    
+    <news:news>
+      <news:publication>
+        <news:name>个人博客</news:name>
+        <news:language>zh-cn</news:language>
+      </news:publication>
+      <news:publication_date>2025-04-29T22:11:26&#43;08:00</news:publication_date>
+      <news:title>First</news:title>
+    </news:news>
+    
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/</loc>
     
     <lastmod>2025-04-29T22:11:26+08:00</lastmod>
     
@@ -14,7 +32,7 @@
   </url>
   
   <url>
-    <loc>https://liushihowe.github.io/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     
     <lastmod>2025-04-29T22:11:18+08:00</lastmod>
     
@@ -22,7 +40,7 @@
     
     <news:news>
       <news:publication>
-        <news:name>My Hugo news site</news:name>
+        <news:name>个人博客</news:name>
         <news:language>zh-cn</news:language>
       </news:publication>
       <news:publication_date>2025-04-29T22:11:18&#43;08:00</news:publication_date>
@@ -32,7 +50,7 @@
   </url>
   
   <url>
-    <loc>https://liushihowe.github.io/articles/</loc>
+    <loc>http://localhost:1313/articles/</loc>
     
     <lastmod>2024-01-11T16:00:00-05:00</lastmod>
     
@@ -41,7 +59,7 @@
   </url>
   
   <url>
-    <loc>https://liushihowe.github.io/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     
     <lastmod>2024-01-11T16:00:00-05:00</lastmod>
     
@@ -50,7 +68,7 @@
   </url>
   
   <url>
-    <loc>https://liushihowe.github.io/tags/climate-crisis/</loc>
+    <loc>http://localhost:1313/tags/climate-crisis/</loc>
     
     <lastmod>2024-01-11T16:00:00-05:00</lastmod>
     
@@ -59,7 +77,7 @@
   </url>
   
   <url>
-    <loc>https://liushihowe.github.io/categories/climate-justice/</loc>
+    <loc>http://localhost:1313/categories/climate-justice/</loc>
     
     <lastmod>2024-01-11T16:00:00-05:00</lastmod>
     
@@ -68,7 +86,7 @@
   </url>
   
   <url>
-    <loc>https://liushihowe.github.io/categories/constitutional-rights/</loc>
+    <loc>http://localhost:1313/categories/constitutional-rights/</loc>
     
     <lastmod>2024-01-11T16:00:00-05:00</lastmod>
     
@@ -77,7 +95,7 @@
   </url>
   
   <url>
-    <loc>https://liushihowe.github.io/tags/decolonial-struggle/</loc>
+    <loc>http://localhost:1313/tags/decolonial-struggle/</loc>
     
     <lastmod>2024-01-11T16:00:00-05:00</lastmod>
     
@@ -86,7 +104,7 @@
   </url>
   
   <url>
-    <loc>https://liushihowe.github.io/categories/deep-state/</loc>
+    <loc>http://localhost:1313/categories/deep-state/</loc>
     
     <lastmod>2024-01-11T16:00:00-05:00</lastmod>
     
@@ -95,7 +113,7 @@
   </url>
   
   <url>
-    <loc>https://liushihowe.github.io/categories/direct-action/</loc>
+    <loc>http://localhost:1313/categories/direct-action/</loc>
     
     <lastmod>2024-01-11T16:00:00-05:00</lastmod>
     
@@ -104,19 +122,19 @@
   </url>
   
   <url>
-    <loc>https://liushihowe.github.io/articles/climate-justice-now/</loc>
+    <loc>http://localhost:1313/articles/climate-justice-now/</loc>
     
     <lastmod>2024-01-11T16:00:00-05:00</lastmod>
     
     
     <image:image>
-      <image:loc>https://liushihowe.github.io/ice.png</image:loc>
+      <image:loc>http://localhost:1313/ice.png</image:loc>
     </image:image>
     
     
     <news:news>
       <news:publication>
-        <news:name>My Hugo news site</news:name>
+        <news:name>个人博客</news:name>
         <news:language>zh-cn</news:language>
       </news:publication>
       <news:publication_date>2024-01-11T16:00:00-05:00</news:publication_date>
@@ -126,19 +144,19 @@
   </url>
   
   <url>
-    <loc>https://liushihowe.github.io/articles/globalist-agenda-exposed/</loc>
+    <loc>http://localhost:1313/articles/globalist-agenda-exposed/</loc>
     
     <lastmod>2024-01-11T16:00:00-05:00</lastmod>
     
     
     <image:image>
-      <image:loc>https://liushihowe.github.io/surveillance.png</image:loc>
+      <image:loc>http://localhost:1313/surveillance.png</image:loc>
     </image:image>
     
     
     <news:news>
       <news:publication>
-        <news:name>My Hugo news site</news:name>
+        <news:name>个人博客</news:name>
         <news:language>zh-cn</news:language>
       </news:publication>
       <news:publication_date>2024-01-11T16:00:00-05:00</news:publication_date>
@@ -148,7 +166,7 @@
   </url>
   
   <url>
-    <loc>https://liushihowe.github.io/tags/financial-freedom/</loc>
+    <loc>http://localhost:1313/tags/financial-freedom/</loc>
     
     <lastmod>2024-01-11T16:00:00-05:00</lastmod>
     
@@ -157,7 +175,7 @@
   </url>
   
   <url>
-    <loc>https://liushihowe.github.io/categories/freedom-alert/</loc>
+    <loc>http://localhost:1313/categories/freedom-alert/</loc>
     
     <lastmod>2024-01-11T16:00:00-05:00</lastmod>
     
@@ -166,7 +184,7 @@
   </url>
   
   <url>
-    <loc>https://liushihowe.github.io/tags/globalist-agenda/</loc>
+    <loc>http://localhost:1313/tags/globalist-agenda/</loc>
     
     <lastmod>2024-01-11T16:00:00-05:00</lastmod>
     
@@ -175,7 +193,7 @@
   </url>
   
   <url>
-    <loc>https://liushihowe.github.io/categories/indigenous-rights/</loc>
+    <loc>http://localhost:1313/categories/indigenous-rights/</loc>
     
     <lastmod>2024-01-11T16:00:00-05:00</lastmod>
     
@@ -184,7 +202,7 @@
   </url>
   
   <url>
-    <loc>https://liushihowe.github.io/tags/resistance/</loc>
+    <loc>http://localhost:1313/tags/resistance/</loc>
     
     <lastmod>2024-01-11T16:00:00-05:00</lastmod>
     
@@ -193,7 +211,7 @@
   </url>
   
   <url>
-    <loc>https://liushihowe.github.io/tags/sovereignty/</loc>
+    <loc>http://localhost:1313/tags/sovereignty/</loc>
     
     <lastmod>2024-01-11T16:00:00-05:00</lastmod>
     
@@ -202,7 +220,7 @@
   </url>
   
   <url>
-    <loc>https://liushihowe.github.io/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     
     <lastmod>2024-01-11T16:00:00-05:00</lastmod>
     
@@ -211,7 +229,7 @@
   </url>
   
   <url>
-    <loc>https://liushihowe.github.io/</loc>
+    <loc>http://localhost:1313/</loc>
     
     <lastmod>2023-01-01T08:00:00-07:00</lastmod>
     
@@ -220,42 +238,42 @@
   </url>
   
   <url>
-    <loc>https://liushihowe.github.io/authors/</loc>
+    <loc>http://localhost:1313/authors/</loc>
     
     
     
   </url>
   
   <url>
-    <loc>https://liushihowe.github.io/authors/buck-patriot/</loc>
+    <loc>http://localhost:1313/authors/buck-patriot/</loc>
     
     
     <image:image>
-      <image:loc>https://liushihowe.github.io/buck.png</image:loc>
+      <image:loc>http://localhost:1313/buck.png</image:loc>
     </image:image>
     
     
   </url>
   
   <url>
-    <loc>https://liushihowe.github.io/authors/luna-rainbow/</loc>
+    <loc>http://localhost:1313/authors/luna-rainbow/</loc>
     
     
     <image:image>
-      <image:loc>https://liushihowe.github.io/luna.png</image:loc>
+      <image:loc>http://localhost:1313/luna.png</image:loc>
     </image:image>
     
     
   </url>
   
   <url>
-    <loc>https://liushihowe.github.io/search/</loc>
+    <loc>http://localhost:1313/search/</loc>
     
     
     
     <news:news>
       <news:publication>
-        <news:name>My Hugo news site</news:name>
+        <news:name>个人博客</news:name>
         <news:language>zh-cn</news:language>
       </news:publication>
       <news:publication_date>0001-01-01T00:00:00&#43;00:00</news:publication_date>

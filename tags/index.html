@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-PCW3KNCFEN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-PCW3KNCFEN');
+        }
+      </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tags | My Hugo news site</title>
+    <title>Tags | 个人博客</title>
     
     
     <meta name="description" content="Breaking news and in-depth analysis on current events, politics, and social issues">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://liushihowe.github.io/tags/">
+    <link rel="canonical" href="http://localhost:1313/tags/">
     
     
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Tags | My Hugo news site">
+    <meta property="og:title" content="Tags | 个人博客">
     <meta property="og:description" content="Breaking news and in-depth analysis on current events, politics, and social issues">
-    <meta property="og:url" content="https://liushihowe.github.io/tags/">
+    <meta property="og:url" content="http://localhost:1313/tags/">
     
     
     
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tags | My Hugo news site">
+    <meta name="twitter:title" content="Tags | 个人博客">
     <meta name="twitter:description" content="Breaking news and in-depth analysis on current events, politics, and social issues">
     
     
@@ -37,14 +51,14 @@
     <header class="bg-white shadow-md">
         <nav class="container mx-auto px-6 py-3">
             <div class="flex justify-between items-center">
-                <a href="/" class="text-2xl font-bold text-gray-800">My Hugo news site</a>
+                <a href="/" class="text-2xl font-bold text-gray-800">个人博客</a>
                 <div class="flex space-x-4">
                     
-                    <a href="/" class="text-gray-700 hover:text-gray-900">Home</a>
+                    <a href="/" class="text-gray-700 hover:text-gray-900">主页</a>
                     
-                    <a href="/categories" class="text-gray-700 hover:text-gray-900">Categories</a>
+                    <a href="/categories" class="text-gray-700 hover:text-gray-900">分类</a>
                     
-                    <a href="/tags" class="text-gray-700 hover:text-gray-900">Tags</a>
+                    <a href="/tags" class="text-gray-700 hover:text-gray-900">标签</a>
                     
                     <div x-data="{ open: false }" class="relative">
                         <button @click="open = !open" class="text-gray-700 hover:text-gray-900">Search</button>
@@ -106,7 +120,7 @@
 
     <footer class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-4">
-            <p class="text-center">&copy; 2025 My Hugo news site. All rights reserved.</p>
+            <p class="text-center">&copy; 2025 个人博客. All rights reserved.</p>
         </div>
     </footer>
 </body>
