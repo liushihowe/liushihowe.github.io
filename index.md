@@ -7,9 +7,11 @@
 
 我的研究兴趣包括：
 
+<!-- 
 * 图像理解与生成（如 Dense Captioning, Diffusion Models）
 * 多模态学习与视觉语言模型（如 CLIP、Long-CLIP）
-* 深度学习系统的工程实现（PyTorch、TensorRT、训练可视化）
+* 深度学习系统的工程实现（PyTorch、TensorRT、训练可视化） 
+-->
 
 我热衷于将前沿研究成果转化为实际应用，平时喜欢复现论文、参与开源项目，也在不断打磨自己的编程与工程能力。
 
