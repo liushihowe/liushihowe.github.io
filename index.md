@@ -1,7 +1,8 @@
+# 刘士豪的主页
 
 ---
 
-### 🧑‍💻 你好，我是刘士豪
+## 🧑‍💻 你好，我是刘士豪
 
 我是一名来自 **西安电子科技大学-广研院** 的计算机技术方向研究生，目前专注于<的研究。
 
@@ -19,7 +20,7 @@
 
 ---
 
-### 🛠️ 技术栈
+## 🛠️ 技术栈
 
 * Python, PyTorch, NumPy
 * OpenCV, Matplotlib
@@ -28,7 +29,7 @@
 
 ---
 
-### 📫 联系我
+## 📫 联系我
 
 * 📧 邮箱：[liuclever@qq.com](mailto:your.email@example.com)
 * 💻 GitHub：[@liushihowe](https://github.com/liushihowe)
