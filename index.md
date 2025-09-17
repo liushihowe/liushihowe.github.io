@@ -1,8 +1,8 @@
-# 刘士豪的个人主页
+# liu 的个人主页
 
 ---
 
-## 🧑‍💻 你好，我是刘士豪
+## 🧑‍💻 你好，我是xxx
 
 我是一名来自 **西安电子科技大学-广研院** 的计算机技术方向研究生，目前专注于<的研究。
 
@@ -32,6 +32,6 @@
 ## 📫 联系我
 
 * 📧 邮箱：[shhliu@stu.xidian.edu.cn](mailto:your.email@example.com)
-* 💻 GitHub：[@liushihowe](https://github.com/liushihowe)
+* 💻 GitHub：[liushihowe](https://github.com/liushihowe)
 
 ---

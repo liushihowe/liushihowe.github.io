@@ -44,13 +44,23 @@ hr {
   opacity: 0.3;
 }
 
-/* 隐藏顶部站点栏（minima 的 header 区域） */
-.site-header {
+/* 强制隐藏站点顶栏及相关元素（全站生效） */
+header.site-header,
+.site-header,
+.site-header *,
+.site-nav,
+.site-title,
+header[role="banner"] {
   display: none !important;
 }
 
-/* 如果还想隐藏页脚，也可以打开下面的注释 */
-/* .site-footer { display: none !important; } */
+/* 去掉可能因主题留出的顶部内边距/间距 */
+.page-content,
+main.page-content,
+.wrapper > .page-content {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
 
 /* 隐藏文章内部的标题区 */
 .post-header {
