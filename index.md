@@ -1,4 +1,4 @@
-# 刘士豪的主页
+# 刘士豪的个人主页
 
 ---
 
@@ -31,7 +31,7 @@
 
 ## 📫 联系我
 
-* 📧 邮箱：[liuclever@qq.com](mailto:your.email@example.com)
+* 📧 邮箱：[shhliu@stu.xidian.edu.cn](mailto:your.email@example.com)
 * 💻 GitHub：[@liushihowe](https://github.com/liushihowe)
 
 ---
