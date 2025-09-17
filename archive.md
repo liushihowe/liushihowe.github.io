@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Blog Archive
+title: 笔记本
 ---
 
 {% for tag in site.tags %}

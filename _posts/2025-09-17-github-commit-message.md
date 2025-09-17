@@ -1,8 +1,21 @@
-# **常见 commit message 模板清单**
+---
+title: "常见 commit message 模板清单"
+date: 2025-09-17
+author: "someone"
+categories: [技术, 教程]
+tags: [git]
+description: "这是一个演示如何使用 Jekyll 和 GitHub Pages 创建博客的示例文章"
+excerpt: "学习如何在 Jekyll 博客中添加代码高亮和格式化内容"
+image: "/assets/images/default-post.jpg"  # 可选：文章封面图
+toc: true  # 可选：显示目录
+comments: true  # 可选：允许评论
+---
+
+## **常见 commit message 模板清单**
 
 ---
 
-## 🔹 常见分类（推荐用动词 + 分类前缀）
+### 🔹 常见分类（推荐用动词 + 分类前缀）
 
 一般遵循 [Conventional Commits](https://www.conventionalcommits.org/) 风格：
 
@@ -56,10 +69,8 @@ perf: improve query efficiency in database
 
 ---
 
-## 🔹 写 commit 的小技巧
+### 🔹 写 commit 的小技巧
 
 1. **简洁**：一句话就够，不要写成长篇大论。
 2. **动词开头**：add / update / fix / improve / remove / refactor …
 3. **具体一点**：比起 `update README`，写成 `docs: add install section in README` 更清楚。
-
----

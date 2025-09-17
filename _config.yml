@@ -39,4 +39,7 @@ defaults:
       path: ""
       type: post
     values:
-      tags: Other
+      author: "someone"
+      tags: [其他]
+      comments: true
+      toc: true
