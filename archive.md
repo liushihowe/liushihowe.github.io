@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 笔记本
+title: 笔记
 ---
 
 {% for tag in site.tags %}
