@@ -7,7 +7,7 @@ tags: [highlight, highlight.js, rouge]
 description: "用于测试代码高亮：包含 Python、纯文本 (txt) 与命令行示例"
 ---
 
-本文用于测试站点的代码高亮设置（Rouge / highlight.js）。以下是三个示例：
+## 本文用于测试站点的代码高亮设置（Rouge / highlight.js）。以下是三个示例
 
 ### Python 示例
 
