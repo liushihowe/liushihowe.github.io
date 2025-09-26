@@ -10,6 +10,20 @@ hr {
   margin-bottom: 20px;
 }
 
+/* 全局字体设置（优先中文支持 + 英文） */
+html, body {
+  font-family: "Noto Sans SC", "Roboto", system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #222;
+}
+
+/* 标题层级使用略粗一点的字重 */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.25;
+}
+
 /* 帖子导航（上一篇/下一篇）样式 */
 .post_navi {
   display: flex;
