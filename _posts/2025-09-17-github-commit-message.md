@@ -11,7 +11,7 @@ toc: true  # 可选：显示目录
 comments: true  # 可选：允许评论
 ---
 
-## **常见 commit message 模板清单**
+### **常见 commit message 模板清单**
 
 ---
 
