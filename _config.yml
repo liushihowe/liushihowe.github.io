@@ -8,7 +8,7 @@
 #  - 修改 `plugins` 列表以启用/禁用功能（请谨慎操作）
 # 修改后可使用 `bundle exec jekyll serve --livereload` 在本地预览（需先安装 Ruby 和 bundler）
 # ===============================
-# title: 某人记录学习的小地方
+title: 记笔记的地方
 # author: "no one"
 # description: "A man has no name." # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
 
