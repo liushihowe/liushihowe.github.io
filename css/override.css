@@ -50,7 +50,9 @@ hr {
 }
 
 /* 如果还想隐藏页脚，也可以打开下面的注释 */
-/* .site-footer { display: none !important; } */
+.site-footer {
+  display: none !important; 
+}
 
 /* 隐藏文章内部的标题区 */
 /*
