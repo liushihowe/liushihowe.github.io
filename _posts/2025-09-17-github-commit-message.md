@@ -15,6 +15,17 @@ comments: true  # 可选：允许评论
 
 ---
 
+<!--
+	Post Front Matter 说明（中文注释）
+	- title: 文章标题
+	- date: 文章日期，格式 YYYY-MM-DD
+	- author: 作者名字
+	- categories/tags: 用于文章分组与检索
+	- description/excerpt: 页面摘要，影响分享时的显示内容
+	- toc/comments: 是否显示目录与评论功能（根据主题支持）
+	编辑提示: 修改 front matter 后，请使用 `jekyll serve` 本地预览页面效果。
+-->
+
 ### 🔹 常见分类（推荐用动词 + 分类前缀）
 
 一般遵循 [Conventional Commits](https://www.conventionalcommits.org/) 风格：

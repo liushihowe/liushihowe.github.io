@@ -1,12 +1,22 @@
-title: 某人记录学习的小地方
-author: "no one"
-description: "A man has no name." # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
+# ===============================
+# 项目配置说明（中文注释）
+# 这是 Jekyll 站点的全局配置文件（_config.yml）。
+# 在这里可以设置站点标题、作者、社交账号、主题和插件等全局选项。
+# 常见修改：
+#  - 修改 `title`、`author`、`description` 来更新站点元信息
+#  - 修改社交账号字段（如 `email`, `github_username`）用于主题显示
+#  - 修改 `plugins` 列表以启用/禁用功能（请谨慎操作）
+# 修改后可使用 `bundle exec jekyll serve --livereload` 在本地预览（需先安装 Ruby 和 bundler）
+# ===============================
+# title: 某人记录学习的小地方
+# author: "no one"
+# description: "A man has no name." # This will show up in places like twitter, linkedin, etc, if you share your sites url as a post.
 
 # Email / Social media user names used by the minima theme:
 # All of these are optional and can be removed or commented out
 email: "shhliu@stu.xidian.edu.cn"
 # twitter_username: "twitteruser"
-github_username: "liushihowe"
+# github_username: "liushihowe"
 #linkedin_username: "linkedinuser"
 #facebook_username: username
 #flickr_username: username

@@ -1,3 +1,11 @@
+<!--
+  include: navlinks.html
+  说明: 文章页底部的上一篇/下一篇导航块。
+  可修改项:
+    - 文本标签（如 "上一篇"、"下一篇"）可以直接在模板中修改。
+    - 当不存在上一篇或下一篇时，模板会回退到 archive 页面。
+  注意事项: 使用了 `page.previous` 和 `page.next` 等 Jekyll 变量，保持 Liquid 语法完整。
+-->
 <hr>
 <div class="post_navi">
   {%- if page.previous.url -%}

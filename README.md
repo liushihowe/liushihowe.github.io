@@ -1,3 +1,13 @@
+# <!--
+#   仓库说明（中文注释）
+#   文件: README.md
+#   用途: 介绍仓库目的、主要目录和如何本地预览/部署。
+#   编辑提示:
+#    - 本仓库由 Jekyll 生成，主题为 minima。
+#    - 本地预览命令（需安装 Ruby 与 bundler）: `bundle exec jekyll serve --livereload`
+#    - 发布到 GitHub Pages: 推送到 `main` 分支，GitHub 会自动部署。
+# -->
+
 # 仓库介绍
 
 ## 🎯 仓库用途

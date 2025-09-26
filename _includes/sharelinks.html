@@ -1,3 +1,11 @@
+<!--
+  include: sharelinks.html
+  说明: 文章页面的社交分享按钮片段，包含内联样式和 SVG 图标。
+  可修改项:
+    - 如果要改变样式，请修改或移动这些规则到 `css/override.css`。
+    - 分享链接使用 `site.url` 与 `page.url` 生成安全的编码地址（safeurl）。
+  注意事项: 这些是可复用的 UI 片段，保持 SVG 和 onclick JS 代码完整以确保分享功能可用。
+-->
 <style>
   #share-buttons {display: inline-block; vertical-align: middle; }
   #share-buttons:after {content: ""; display: block; clear: both;}

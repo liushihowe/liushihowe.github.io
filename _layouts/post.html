@@ -1,6 +1,18 @@
 ---
 layout: default
 ---
+<!--
+  layout: post.html
+  说明: 博客文章页面的布局模板。此模板负责渲染单篇文章的标题、作者、发布时间、正文、分享按钮和上一篇/下一篇导航。
+  关键 Liquid 变量:
+    - `page.title` : 文章标题
+    - `page.author`: 文章作者（来自 Front Matter 或 `_config.yml` 的默认作者）
+    - `page.date`  : 文章发布时间（用于显示和机器可读的 datetime）
+    - `content`    : Jekyll 在渲染时插入的文章正文 HTML
+    - `page.previous` / `page.next`: Jekyll 提供的相邻文章引用，用于导航
+  注意事项: 请不要移除 `{{ content }}` 或包含的 `sharelinks.html` 与 `navlinks.html`，否则页面功能不完整。
+-->
+
 <link href="/css/override.css" rel="stylesheet" type="text/css">
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 

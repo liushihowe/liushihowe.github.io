@@ -1,4 +1,3 @@
----
 title: "Blog Post Title From First Header"
 date: 2021-03-08
 author: "Ssomeone"
@@ -10,6 +9,19 @@ image: "/assets/images/default-post.jpg"  # 可选：文章封面图
 # toc: true  # 可选：显示目录
 comments: true  # 可选：允许评论
 ---
+
+<!--
+    Post Front Matter 说明（中文注释）
+    - title: 文章标题，会显示在页面和 meta 中
+    - date: 文章日期，影响排序和 URL
+    - author: 作者名字，可不设则使用 `_config.yml` 的默认作者
+    - categories/tags: 用于分类和标签页的归档检索
+    - description/excerpt: 列表或分享时的摘要文本
+    - image: 可选的封面图路径
+    - toc: 是否显示目录（如果主题支持）
+    - comments: 是否允许评论
+    编辑提示: 修改 front matter 后，保存并使用 `jekyll serve` 本地预览。
+-->
 
 ## 这是一篇示例博客文章。您可以在这里讨论各种有趣的事情
 
