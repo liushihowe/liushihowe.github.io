@@ -67,16 +67,3 @@ hr {
   display: none !important;
 }
 */
-
-/* Ensure share links' floats don't leak into following content */
-.share-links {
-  /* create a new block formatting context to contain floats */
-  overflow: auto;
-  zoom: 1; /* for older IE */
-  margin-bottom: 1em;
-}
-
-/* Ensure post content clears any preceding floats */
-.post-content {
-  clear: both;
-}

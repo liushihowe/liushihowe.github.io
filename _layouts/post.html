@@ -1,17 +1,8 @@
 ---
 layout: default
 ---
-<!--
-  layout: post.html
-  说明: 博客文章页面的布局模板。此模板负责渲染单篇文章的标题、作者、发布时间、正文、分享按钮和上一篇/下一篇导航。
-  关键 Liquid 变量:
-    - `page.title` : 文章标题
-    - `page.author`: 文章作者（来自 Front Matter 或 `_config.yml` 的默认作者）
-    - `page.date`  : 文章发布时间（用于显示和机器可读的 datetime）
-    - `content`    : Jekyll 在渲染时插入的文章正文 HTML
-    - `page.previous` / `page.next`: Jekyll 提供的相邻文章引用，用于导航
-  注意事项: 请不要移除 `{{ content }}` 或包含的 `sharelinks.html` 与 `navlinks.html`，否则页面功能不完整。
--->
+
+<link href="/css/override.css" rel="stylesheet" type="text/css">
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
@@ -39,27 +30,14 @@ layout: default
 </article>
 
 
-<!-- 
-
-读取 [](file:///d%3A/postgrad/1_MyBlog/liushihowe.github.io/_layouts/post.html)
-
-这个 post.html 文件是一个 Jekyll 博客的 **文章布局模板**。它定义了博客文章页面的结构和样式。具体功能如下：
-
-## 主要作用：
-1. **文章页面布局** - 定义每篇博客文章的显示格式
-2. **文章标题显示** - 显示文章标题 (`{{ page.title }}`)
-3. **发布时间显示** - 显示文章发布日期和作者信息
-4. **分享链接** - 包含社交媒体分享按钮 (`sharelinks.html`)
-5. **文章内容** - 显示文章正文内容 (`{{ content }}`)
-6. **导航链接** - 包含文章间的导航链接 (`navlinks.html`)
-
-## 文件结构：
-- **Front Matter** (`---` 之间的部分) - 指定使用 `default` 布局作为基础
-- **文章头部** - 标题、日期、作者信息
-- **分享区域** - 社交分享按钮
-- **文章内容区** - 正文内容和导航
-- **SEO元数据** - 包含结构化数据标记
-
-当你创建新的博客文章时，Jekyll 会使用这个模板来渲染文章页面的最终HTML输出。
-
+<!--
+  layout: post.html
+  说明: 博客文章页面的布局模板。此模板负责渲染单篇文章的标题、作者、发布时间、正文、分享按钮和上一篇/下一篇导航。
+  关键 Liquid 变量:
+    - `page.title` : 文章标题
+    - `page.author`: 文章作者（来自 Front Matter 或 `_config.yml` 的默认作者）
+    - `page.date`  : 文章发布时间（用于显示和机器可读的 datetime）
+    - `content`    : Jekyll 在渲染时插入的文章正文 HTML
+    - `page.previous` / `page.next`: Jekyll 提供的相邻文章引用，用于导航
+  注意事项: 请不要移除 `{{ content }}` 或包含的 `sharelinks.html` 与 `navlinks.html`，否则页面功能不完整。
 -->
