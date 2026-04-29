@@ -1,0 +1,33 @@
+[
+
+    {
+        "title": "v-PPL: Visual-grounded Perplexity for Fine-grained Image-Text Alignment Evaluation in Long Text Scenarios",
+        "authors": ["Zhiyuan Hu", "Ying Zhang", "Xuefeng Liang", "Shihao Liu"],
+        "venue": "ACMMM",
+        "year": 2026,
+        "highlight": true,
+        "thumbnail": "images/vppl.png",
+        "links": {
+            "arxiv": "#",
+            "project": "#",
+            "code": "#"
+        },
+        "description": "A novel evaluation metric that grounds perplexity in visual content, going beyond coarse CLIP scores to reward precise, detail-aware matching in long-text image-text alignment."
+    },
+    
+    {
+        "title": "FineLongCLIP: Advancing Fine-Grained Image-Text Matching via a Dual-Branch Visual Encoder Capturing Global and Detailed Features",
+        "authors": ["Zhiyuan Hu", "Ying Zhang", "Xuefeng Liang", "Xin Chen", "Shihao Liu"],
+        "venue": "ICASSP",
+        "year": 2026,
+        "highlight": true,
+        "thumbnail": "images/finelongclip.png",
+        "links": {
+            "arxiv": "#",
+            "project": "#",
+            "code": "#"
+        },
+        "description": "A dual-branch visual encoder with adaptive attention optimization that aligns long texts with both global semantics and local visual details, achieving SOTA fine-grained image-text matching across four datasets."
+    }
+
+]

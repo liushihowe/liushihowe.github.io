@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shihao Liu · Academic Homepage">
+  <meta property="og:title" content="Shihao Liu · Academic Homepage">
+  <meta property="og:description" content="Personal academic homepage focusing on vision-language models and fine-grained image-text matching.">
+  <meta property="og:type" content="website">
+  <title>Shihao Liu · Academic Homepage</title>
+  <link rel="icon" id="favicon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23415f91'/><text x='50' y='68' font-size='52' font-weight='bold' text-anchor='middle' fill='white' font-family='sans-serif'>刘</text></svg>">
+
+  <script>
+    var FAV_ICONS = {
+      dark:  "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23aac7ff'/><text x='50' y='68' font-size='52' font-weight='bold' text-anchor='middle' fill='%2311193e' font-family='sans-serif'>刘</text></svg>",
+      light: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23415f91'/><text x='50' y='68' font-size='52' font-weight='bold' text-anchor='middle' fill='white' font-family='sans-serif'>刘</text></svg>"
+    };
+    window.__setTheme = function(scheme, contrast) {
+      var cls = scheme;
+      if (contrast === 'medium') cls = scheme + '-medium-contrast';
+      else if (contrast === 'high') cls = scheme + '-high-contrast';
+      document.documentElement.className = cls;
+      document.documentElement.setAttribute('data-scheme', scheme);
+      document.getElementById('favicon').href = FAV_ICONS[scheme] || FAV_ICONS.light;
+    };
+    (function() {
+      var scheme = localStorage.getItem('theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      var contrast = localStorage.getItem('contrast') || 'default';
+      window.__setTheme(scheme, contrast);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="material-theme-css/light.css">
+  <link rel="stylesheet" href="material-theme-css/dark.css">
+  <link rel="stylesheet" href="material-theme-css/light-mc.css">
+  <link rel="stylesheet" href="material-theme-css/dark-mc.css">
+  <link rel="stylesheet" href="material-theme-css/light-hc.css">
+  <link rel="stylesheet" href="material-theme-css/dark-hc.css">
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?195f0fd4dcb5f6a1e29b4404487bd342";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+</head>
+<body>
+
+  <button class="theme-toggle scheme-toggle" aria-label="切换深浅模式" title="切换深浅模式">
+    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="5"/>
+      <line x1="12" y1="1" x2="12" y2="3"/>
+      <line x1="12" y1="21" x2="12" y2="23"/>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+      <line x1="1" y1="12" x2="3" y2="12"/>
+      <line x1="21" y1="12" x2="23" y2="12"/>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+    </svg>
+    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+    </svg>
+  </button>
+
+  <button class="theme-toggle contrast-toggle" aria-label="切换对比度" title="切换对比度">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/>
+      <path d="M12 2a10 10 0 0 1 0 20"/>
+      <line x1="12" y1="2" x2="12" y2="22"/>
+    </svg>
+  </button>
+
+  <main class="container">
+
+    <!-- Hero -->
+    <header class="hero">
+      <img class="avatar" id="profile-avatar" src="" alt="">
+      <div class="hero-info">
+        <h1 id="profile-name"></h1>
+        <p class="affiliation" id="profile-affiliation"></p>
+        <p class="bio" id="profile-bio"></p>
+        <div class="social-links" id="social-links"></div>
+      </div>
+    </header>
+
+    <!-- Research -->
+    <section id="research">
+      <h2>Research</h2>
+      <p id="research-text"></p>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+      <h2>Publications</h2>
+      <div id="pub-list" class="pub-list" style="min-height: 200px"></div>
+    </section>
+
+    <template id="pub-template">
+      <div class="pub-card">
+        <div class="pub-teaser">
+          <img src="" alt="" loading="lazy">
+        </div>
+        <div class="pub-body">
+          <div class="pub-title"></div>
+          <div class="pub-authors"></div>
+          <div class="pub-venue"></div>
+          <div class="pub-links"></div>
+          <div class="pub-description"></div>
+        </div>
+      </div>
+    </template>
+
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div id="exp-list"></div>
+    </section>
+
+    <!-- Miscellanea -->
+    <section id="miscellanea" class="miscellanea">
+      <h2>Miscellanea</h2>
+      <ul id="misc-list"></ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <span id="footer-text"></span> · Last updated: <time id="last-updated"></time>
+    </footer>
+
+  </main>
+
+  <script>
+    /* ===== Theme Toggle ===== */
+    (function() {
+      var schemeBtn = document.querySelector('.scheme-toggle');
+      schemeBtn.addEventListener('click', function() {
+        var cur = document.documentElement.getAttribute('data-scheme');
+        var next = cur === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('theme', next);
+        window.__setTheme(next, localStorage.getItem('contrast') || 'default');
+      });
+
+      var contrastBtn = document.querySelector('.contrast-toggle');
+      var contrasts = ['default', 'medium', 'high'];
+      contrastBtn.addEventListener('click', function() {
+        var cur = localStorage.getItem('contrast') || 'default';
+        var next = contrasts[(contrasts.indexOf(cur) + 1) % contrasts.length];
+        localStorage.setItem('contrast', next);
+        window.__setTheme(localStorage.getItem('theme') || 'light', next);
+      });
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+        if (!localStorage.getItem('theme')) {
+          window.__setTheme(e.matches ? 'dark' : 'light', localStorage.getItem('contrast') || 'default');
+        }
+      });
+    })();
+
+    /* ===== Render All ===== */
+    (function() {
+      var MY_NAME = 'Shihao Liu';
+      var linkLabels = { project: 'Project', arxiv: 'arXiv', code: 'Code', pdf: 'PDF', video: 'Video' };
+      var SVG_ICONS = {
+        email: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>',
+        scholar: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 4 3 6 3s6-1 6-3v-5"/></svg>',
+        github: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>',
+        twitter: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>'
+      };
+
+      function renderProfile(p) {
+        document.getElementById('profile-avatar').src = p.avatar;
+        document.getElementById('profile-avatar').alt = p.name;
+        document.getElementById('profile-name').textContent = p.name;
+        document.getElementById('profile-affiliation').textContent = p.affiliation;
+        document.getElementById('profile-bio').textContent = p.bio;
+
+        var frag = document.createDocumentFragment();
+        p.social.forEach(function(s) {
+          var a = document.createElement('a');
+          a.href = s.href;
+          a.title = s.label;
+          a.setAttribute('aria-label', s.label);
+          if (s.href.startsWith('http')) { a.target = '_blank'; a.rel = 'noopener'; }
+          a.innerHTML = SVG_ICONS[s.icon] || '';
+          frag.appendChild(a);
+        });
+        document.getElementById('social-links').appendChild(frag);
+
+        document.getElementById('research-text').textContent = p.research;
+
+        var expFrag = document.createDocumentFragment();
+        p.experience.forEach(function(e) {
+          var div = document.createElement('div');
+          div.className = 'exp-item';
+          div.innerHTML = '<h3>' + e.title + '</h3><p class="exp-meta">' + e.meta + '</p>';
+          expFrag.appendChild(div);
+        });
+        document.getElementById('exp-list').appendChild(expFrag);
+
+        var miscFrag = document.createDocumentFragment();
+        p.miscellanea.forEach(function(m) {
+          var li = document.createElement('li');
+          li.textContent = m;
+          miscFrag.appendChild(li);
+        });
+        document.getElementById('misc-list').appendChild(miscFrag);
+
+        document.getElementById('footer-text').textContent = '© ' + new Date().getFullYear() + ' Shihao Liu';
+        document.getElementById('last-updated').textContent = document.lastModified;
+      }
+
+      function renderPublications(papers) {
+        var container = document.getElementById('pub-list');
+        var tmpl = document.getElementById('pub-template');
+        var frag = document.createDocumentFragment();
+
+        papers.sort(function(a, b) { return b.year - a.year; }).forEach(function(paper) {
+          var card = tmpl.content.cloneNode(true).firstElementChild;
+          if (paper.highlight) card.classList.add('highlight');
+
+          var img = card.querySelector('.pub-teaser img');
+          if (paper.thumbnail) {
+            img.src = paper.thumbnail;
+            img.alt = 'Teaser for ' + paper.title;
+          } else {
+            img.remove();
+          }
+
+          card.querySelector('.pub-title').textContent = paper.title;
+          card.querySelector('.pub-authors').innerHTML = paper.authors.map(function(name) {
+            return name === MY_NAME ? '<strong>' + name + '</strong>' : name;
+          }).join(', ');
+          card.querySelector('.pub-venue').textContent = paper.venue + ' ' + paper.year;
+
+          var links = paper.links || {};
+          var linksEl = card.querySelector('.pub-links');
+          Object.keys(links).forEach(function(key) {
+            var a = document.createElement('a');
+            a.href = links[key];
+            a.target = '_blank';
+            a.rel = 'noopener';
+            a.textContent = linkLabels[key] || key;
+            linksEl.appendChild(a);
+          });
+          if (!linksEl.children.length) linksEl.remove();
+
+          if (paper.description) {
+            card.querySelector('.pub-description').textContent = paper.description;
+          } else {
+            card.querySelector('.pub-description').remove();
+          }
+
+          frag.appendChild(card);
+        });
+
+        container.appendChild(frag);
+      }
+
+      Promise.all([
+        fetch('data/profile.json').then(function(r) { return r.json(); }),
+        fetch('data/publications.json').then(function(r) { return r.json(); })
+      ]).then(function(data) {
+        renderProfile(data[0]);
+        renderPublications(data[1]);
+      });
+    })();
+  </script>
+
+</body>
+</html>

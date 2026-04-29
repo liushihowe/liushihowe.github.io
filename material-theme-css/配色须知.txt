@@ -1,0 +1,109 @@
+# Material Design 3 配色系统速查 Prompt
+
+## 核心规则
+每个颜色角色规定了"这个颜色用在哪里"，而不只是色值。
+所有 On-X 颜色必须与其对应的 X 背景配对使用，确保对比度可读。
+
+---
+
+## 强调色系（Accent）— 按重要性分配，不等权
+
+primary              → 最重要元素的填充色：主操作按钮背景、FAB、激活态图标
+on-primary           → 放在 primary 背景上的文字/图标颜色
+primary-container    → primary 的大面积浅色版：信息卡片背景、高亮区块、标签底色
+on-primary-container → 放在 primary-container 背景上的文字/图标颜色
+surface-tint         → 海拔叠加色（等于 primary），用于 Material You 的高度着色效果，一般不直接使用
+
+secondary              → 次要元素填充色：筛选 Chip、导航图标选中态、低强调按钮
+on-secondary           → 放在 secondary 背景上的文字/图标
+secondary-container    → secondary 的浅色版：次要信息块背景
+on-secondary-container → 放在 secondary-container 上的文字/图标
+
+tertiary              → 点缀色填充：角标、通知气泡、特殊强调小元素，用量最少
+on-tertiary           → 放在 tertiary 背景上的文字/图标
+tertiary-container    → tertiary 的浅色版：引用块、对比说明区块背景
+on-tertiary-container → 放在 tertiary-container 上的文字/图标
+
+---
+
+## 错误色（Error）— 静态色，不随主题变化
+
+error              → 错误状态小元素填充：报错图标、输入框错误边框
+on-error           → 放在 error 背景上的文字/图标
+error-container    → 错误提示大面积背景：错误提示卡片、警告横幅底色
+on-error-container → 放在 error-container 上的文字/图标
+
+---
+
+## 表面色系（Surface）— 页面与组件的背景层次
+
+background    → 页面最底层背景色（通常与 surface 相同）
+on-background → 页面底层上的文字颜色（通常与 on-surface 相同）
+
+surface         → 标准页面/组件背景色
+on-surface      → 放在任何 surface 背景上的主要文字/图标颜色（对比度最高）
+surface-variant → 较深的表面变体，用于需要轻微区分的容器（如输入框背景）
+on-surface-variant → 次要文字/图标：图注、时间戳、占位文字、非激活状态
+
+surface-dim    → 最暗的表面色，用于遮罩后的背景、非激活状态区域
+surface-bright → 最亮的表面色，用于需要突出的前景面板
+
+surface-container-lowest  → 第1层：最浅，通常为纯白，用于最底层卡片或页面底色
+surface-container-low     → 第2层：极浅灰，导航栏/侧边栏背景
+surface-container          → 第3层：标准容器背景，普通卡片
+surface-container-high     → 第4层：稍深，弹出菜单、悬浮卡片
+surface-container-highest  → 第5层：最深，对话框、抽屉、最顶层浮层
+
+越往 highest 颜色越深，视觉层级越高，不需要额外加阴影就能感受到层叠关系。
+
+---
+
+## 边框与分割线（Outline）
+
+outline         → 有功能意义的边框：输入框轮廓、可点击元素边界（对比度≥3:1，必须清晰可见）
+outline-variant → 纯装饰性分割线：列表行分隔线、表格内线（对比度低，存在感弱）
+
+不可混用：outline 传递交互语义，outline-variant 只做视觉分区。
+
+---
+
+## 反色系统（Inverse）— 在浅色界面中做深色弹出元素
+
+inverse-surface    → 深色背景（近黑灰）：Snackbar/Toast 背景
+inverse-on-surface → 放在 inverse-surface 上的浅色文字
+inverse-primary    → 放在 inverse-surface 上的品牌色操作按钮（如"撤销"）
+
+典型场景：浅色主题页面中弹出的深色底部提示条。
+
+---
+
+## Fixed 固定色系（用于跨主题保持一致的场景，如浅/深色主题共用组件）
+
+primary-fixed             → 无论深浅主题都保持不变的浅色 primary 容器色
+on-primary-fixed          → 放在 primary-fixed 上的深色文字（最高对比度版本）
+primary-fixed-dim         → primary-fixed 的稍深版本，用于选中态/按压态
+on-primary-fixed-variant  → 放在 primary-fixed 上的次级文字（稍低对比度）
+
+secondary/tertiary-fixed 系列同理，结构完全相同。
+
+Fixed 色系用于需要在浅色和深色主题下都保持同一外观的 UI 组件，普通界面开发无需使用。
+
+---
+
+## 工具色
+
+shadow → 阴影颜色（纯黑，配合 opacity 控制强度）
+scrim  → 弹窗遮罩颜色（纯黑，配合透明度覆盖底层内容）
+
+---
+
+## PPT 配色最简映射（8个色值覆盖99%场景）
+
+封面/强调页背景      → primary          文字用 on-primary
+内容页底色           → surface          正文用 on-surface
+核心信息卡片         → primary-container   文字用 on-primary-container
+引用/对比卡片        → tertiary-container  文字用 on-tertiary-container
+次要文字/注释        → on-surface-variant
+分割线               → outline-variant
+功能性边框           → outline
+警告/错误提示块      → error-container     文字用 on-error-container
