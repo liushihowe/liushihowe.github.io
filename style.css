@@ -50,54 +50,6 @@ section li {
   color: var(--md-sys-color-on-surface-variant);
 }
 
-/* ===== Theme Toggle ===== */
-.theme-toggle {
-  position: fixed;
-  z-index: 100;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--md-sys-color-surface-container-high);
-  border: 1px solid var(--md-sys-color-outline);
-  border-radius: 50%;
-  cursor: pointer;
-  color: var(--md-sys-color-on-surface-variant);
-}
-
-.scheme-toggle {
-  top: 1.5rem;
-  right: 1.5rem;
-}
-
-.contrast-toggle {
-  top: 5rem;
-  right: 1.5rem;
-}
-
-.theme-toggle:hover {
-  background: var(--md-sys-color-surface-bright);
-}
-
-.theme-toggle:focus-visible {
-  outline: 2px solid var(--md-sys-color-primary);
-  outline-offset: 2px;
-}
-
-.theme-toggle svg {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  transition: opacity 0.3s ease;
-}
-
-/* Show sun icon in dark mode, moon icon in light mode */
-[data-scheme="dark"] .icon-sun  { opacity: 1; }
-[data-scheme="dark"] .icon-moon { opacity: 0; }
-[data-scheme="light"] .icon-sun  { opacity: 0; }
-[data-scheme="light"] .icon-moon { opacity: 1; }
-
 /* ===== Hero ===== */
 .hero {
   display: flex;
@@ -129,15 +81,41 @@ section li {
   font-size: 1.05rem;
   font-weight: 500;
   color: var(--md-sys-color-primary);
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.3rem;
 }
 
-.hero-info .bio {
+.hero-info .tagline {
   color: var(--md-sys-color-on-surface-variant);
+  margin-bottom: 0.9rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ===== Personal Meta ===== */
+.personal-meta {
   margin-bottom: 1.2rem;
-  max-width: 54ch;
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: 0.95rem;
+  color: var(--md-sys-color-on-surface-variant);
+  line-height: 1.8;
+}
+
+.meta-line {
+  display: block;
+}
+
+.email-line {
+  display: block;
+  margin-top: 0.1rem;
+}
+
+.email-line a {
+  color: var(--md-sys-color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.email-line a:hover {
+  text-decoration: underline;
 }
 
 /* ===== Social Links ===== */
@@ -163,9 +141,22 @@ section li {
   background: var(--md-sys-color-surface-container-high);
 }
 
-.social-links svg {
+.social-links svg,
+.social-links img,
+.social-links .mask-icon {
   width: 18px;
   height: 18px;
+}
+
+.social-links .mask-icon {
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
 }
 
 /* ===== Publications ===== */

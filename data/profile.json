@@ -1,13 +1,17 @@
 {
   "name": "Shihao Liu",
   "avatar": "images/avatar.jpg",
-  "affiliation": "M.S. Student · Xidian University ",
-  "bio": "My research focuses on vision-language models and fine-grained image-text matching. I design methods for cross-modal alignment that capture both global semantics and local visual details.",
+  "affiliation": "M.S. Student · Xidian University",
+  "tagline": "Building fine-grained alignment between images and text.",
+  "birthday": "2003-12-23",
+  "gender": "Male",
+  "hometown": "Nanyang, Henan",
+  "email_display": "shhliu@stu.xidian.edu.cn",
   "social": [
-    { "icon": "email",    "href": "mailto:shhliu@xidian.edu.cn", "label": "Email" },
-    { "icon": "scholar",  "href": "#",                            "label": "Google Scholar" },
-    { "icon": "github",   "href": "https://github.com/liushihowe", "label": "GitHub" },
-    { "icon": "twitter",  "href": "#",                            "label": "Twitter / X" }
+    { "icon": "github",   "href": "https://github.com/liushihowe",   "label": "GitHub" },
+    { "icon": "wechat",   "href": "#",                               "label": "WeChat" },
+    { "icon": "bilibili", "href": "#",                               "label": "Bilibili" },
+    { "icon": "zhihu",    "href": "#",                               "label": "Zhihu" }
   ],
   "research": "My research lies at the intersection of computer vision and deep learning. My work centers on improving fine-grained alignment between vision and language, particularly in long-text scenarios where capturing subtle visual details is critical. I develop dual-branch encoders that separately model global semantics and local features, and design evaluation metrics that go beyond coarse CLIP scores to reward precise, detail-aware matching.",
   "experience": [
