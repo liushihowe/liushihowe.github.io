@@ -8,9 +8,8 @@
         "highlight": true,
         "thumbnail": "images/vppl.png",
         "links": {
-            "arxiv": "#",
-            "project": "#",
-            "code": "#"
+            "paper": "#",
+            "code": "https://github.com/liushihowe?tab=repositories"
         },
         "description": "A novel evaluation metric that grounds perplexity in visual content, going beyond coarse CLIP scores to reward precise, detail-aware matching in long-text image-text alignment."
     },
@@ -23,9 +22,8 @@
         "highlight": true,
         "thumbnail": "images/finelongclip.png",
         "links": {
-            "arxiv": "#",
-            "project": "#",
-            "code": "#"
+            "paper": "https://ieeexplore.ieee.org/document/11461536",
+            "code": "https://github.com/liushihowe?tab=repositories"
         },
         "description": "A dual-branch visual encoder with adaptive attention optimization that aligns long texts with both global semantics and local visual details, achieving SOTA fine-grained image-text matching across four datasets."
     }
