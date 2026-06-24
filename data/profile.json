@@ -15,8 +15,8 @@
   ],
   "research": "My research lies at the intersection of computer vision and deep learning. My work centers on improving fine-grained alignment between vision and language, particularly in long-text scenarios where capturing subtle visual details is critical. I develop dual-branch encoders that separately model global semantics and local features, and design evaluation metrics that go beyond coarse CLIP scores to reward precise, detail-aware matching.",
   "experience": [
-    { "title": "M.S. in Computer Science", "meta": "Xidian University · Guangzhou Institute of Technology · 2024.09 – Present" },
-    { "title": "B.S. in Computer Science", "meta": "Henan University · Artificial Intelligence · 2020.09 – 2024.06" }
+    { "title": "M.S. in Computer Science", "meta": "Xidian University · 2024.09 – 2027.06" },
+    { "title": "B.S. in Artificial Intelligence", "meta": "Henan University · 2020.09 – 2024.06" }
   ],
   "miscellanea": [
     "Placeholder ...",
