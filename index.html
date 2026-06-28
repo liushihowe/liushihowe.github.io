@@ -9,7 +9,7 @@
   <meta property="og:description" content="Personal academic homepage focusing on vision-language models and fine-grained image-text matching.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://liushihowe.github.io/">
-  <meta property="og:image" content="https://liushihowe.github.io/images/avatar.jpg">
+  <meta property="og:image" content="https://liushihowe.github.io/images/avatar.webp">
   <meta property="og:image:width" content="400">
   <meta property="og:image:height" content="400">
   <meta name="theme-color" id="theme-color" content="#f9f9ff">
@@ -42,16 +42,12 @@
 
   <link rel="stylesheet" href="material-theme-css/light.css">
   <link rel="stylesheet" href="material-theme-css/dark.css">
-  <link rel="stylesheet" href="material-theme-css/light-mc.css">
-  <link rel="stylesheet" href="material-theme-css/dark-mc.css">
-  <link rel="stylesheet" href="material-theme-css/light-hc.css">
-  <link rel="stylesheet" href="material-theme-css/dark-hc.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="container">
     <header class="hero">
-      <img class="avatar" id="profile-avatar" src="" alt="">
+      <img class="avatar" id="profile-avatar" alt="">
       <div class="hero-info">
         <h1 id="profile-name"></h1>
         <p class="affiliation" id="profile-affiliation"></p>
@@ -68,13 +64,13 @@
 
     <section id="publications">
       <h2>Publications</h2>
-      <div id="pub-list" class="pub-list" style="min-height: 200px"></div>
+      <div id="pub-list" class="pub-list"></div>
     </section>
 
     <template id="pub-template">
       <div class="pub-card">
         <div class="pub-teaser">
-          <img src="" alt="" loading="lazy">
+          <img alt="" loading="lazy">
         </div>
         <div class="pub-body">
           <div class="pub-title"></div>
@@ -103,7 +99,6 @@
 
   <script>
     (function() {
-      var MY_NAME = 'Shihao Liu';
       var linkLabels = { project: 'Project', arxiv: 'arXiv', paper: 'Paper', code: 'Code', pdf: 'PDF', video: 'Video' };
       var iconPaths = {
         github: 'icons/github.svg',
@@ -171,7 +166,7 @@
         document.getElementById('last-updated').textContent = document.lastModified;
       }
 
-      function renderPublications(papers) {
+      function renderPublications(papers, myName) {
         var container = document.getElementById('pub-list');
         var tmpl = document.getElementById('pub-template');
         var frag = document.createDocumentFragment();
@@ -192,7 +187,7 @@
           var authorsEl = card.querySelector('.pub-authors');
           paper.authors.forEach(function(name, i) {
             if (i) authorsEl.appendChild(document.createTextNode(', '));
-            if (name === MY_NAME) appendText(authorsEl, 'strong', '', name);
+            if (name === myName) appendText(authorsEl, 'strong', '', name);
             else authorsEl.appendChild(document.createTextNode(name));
           });
           card.querySelector('.pub-venue').textContent = paper.venue + ' ' + paper.year;
@@ -230,7 +225,7 @@
         svgIcons.bilibili = data[4];
         svgIcons.zhihu = data[5];
         renderProfile(data[0]);
-        renderPublications(data[1]);
+        renderPublications(data[1], data[0].name);
       });
     })();
   </script>

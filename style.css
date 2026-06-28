@@ -10,7 +10,12 @@
 /* ===== Base ===== */
 html {
   font-size: 15px;
-  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -148,22 +153,12 @@ section li {
   height: 18px;
 }
 
-.social-links .mask-icon {
-  display: inline-block;
-  background-color: currentColor;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-}
-
 /* ===== Publications ===== */
 .pub-list {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  min-height: 200px;
 }
 
 /* Card */
@@ -335,8 +330,6 @@ a:hover {
     padding: 2rem 1rem 3rem;
   }
 
-
-
   .hero {
     flex-direction: column;
     align-items: center;
@@ -348,10 +341,6 @@ a:hover {
   .avatar {
     width: 40%;
     max-width: 140px;
-  }
-
-  .hero-info .bio {
-    max-width: none;
   }
 
   .social-links {
@@ -375,10 +364,6 @@ a:hover {
 
 /* ===== Print ===== */
 @media print {
-  .theme-toggle {
-    display: none;
-  }
-
   body {
     font-size: 11pt;
     color: #000;

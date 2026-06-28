@@ -6,7 +6,7 @@
         "venue": "ACMMM",
         "year": 2026,
         "highlight": true,
-        "thumbnail": "images/vppl.png",
+        "thumbnail": "images/vppl.webp",
         "links": {
             "paper": "#",
             "code": "https://github.com/liushihowe?tab=repositories"
@@ -20,7 +20,7 @@
         "venue": "ICASSP",
         "year": 2026,
         "highlight": true,
-        "thumbnail": "images/finelongclip.png",
+        "thumbnail": "images/finelongclip.webp",
         "links": {
             "paper": "https://ieeexplore.ieee.org/document/11461536",
             "code": "https://github.com/liushihowe?tab=repositories"
