@@ -99,12 +99,15 @@
 
   <script>
     (function() {
-      var linkLabels = { project: 'Project', arxiv: 'arXiv', paper: 'Paper', code: 'Code', pdf: 'PDF', video: 'Video' };
-      var iconPaths = {
-        github: 'icons/github.svg',
-        wechat: 'icons/wechat.svg',
+      var linkLabels         = { project: 'Project', arxiv: 'arXiv', paper: 'Paper', code: 'Code', pdf: 'PDF', video: 'Video' };
+      var publicationIconFor = { project: 'paper', arxiv: 'paper', paper: 'paper', pdf: 'paper', code: 'code', video: 'paper' };
+      var iconPaths          = {
+        github  : 'icons/github.svg',
+        wechat  : 'icons/wechat.svg',
         bilibili: 'icons/bilibili.svg',
-        zhihu: 'icons/zhihu.svg'
+        zhihu   : 'icons/zhihu.svg',
+        paper   : 'icons/paper.svg',
+        code    : 'icons/code.svg'
       };
       var svgIcons = {};
 
@@ -194,11 +197,13 @@
 
           var linksEl = card.querySelector('.pub-links');
           Object.keys(paper.links || {}).forEach(function(key) {
-            var a = document.createElement('a');
-            a.href = paper.links[key];
-            a.target = '_blank';
-            a.rel = 'noopener';
-            a.textContent = linkLabels[key] || key;
+            var a        = document.createElement('a');
+                a.href   = paper.links[key];
+                a.target = '_blank';
+                a.rel    = 'noopener';
+                a.title  = linkLabels[key] || key;
+                a.setAttribute('aria-label', linkLabels[key] || key);
+                a.innerHTML   = svgIcons[publicationIconFor[key]] || svgIcons.paper;
             linksEl.appendChild(a);
           });
           if (!linksEl.children.length) linksEl.remove();
@@ -218,12 +223,16 @@
         fetch(iconPaths.github).then(function(r) { return r.text(); }),
         fetch(iconPaths.wechat).then(function(r) { return r.text(); }),
         fetch(iconPaths.bilibili).then(function(r) { return r.text(); }),
-        fetch(iconPaths.zhihu).then(function(r) { return r.text(); })
+        fetch(iconPaths.zhihu).then(function(r) { return r.text(); }),
+        fetch(iconPaths.paper).then(function(r) { return r.text(); }),
+        fetch(iconPaths.code).then(function(r) { return r.text(); })
       ]).then(function(data) {
-        svgIcons.github = data[2];
-        svgIcons.wechat = data[3];
+        svgIcons.github   = data[2];
+        svgIcons.wechat   = data[3];
         svgIcons.bilibili = data[4];
-        svgIcons.zhihu = data[5];
+        svgIcons.zhihu    = data[5];
+        svgIcons.paper    = data[6];
+        svgIcons.code     = data[7];
         renderProfile(data[0]);
         renderPublications(data[1], data[0].name);
       });
