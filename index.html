@@ -17,6 +17,32 @@
   <link rel="canonical" href="https://liushihowe.github.io/">
   <link rel="icon" id="favicon" href="icons/pixel-crown-monet-light.svg" type="image/svg+xml">
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shihao Liu",
+    "url": "https://liushihowe.github.io/",
+    "image": "https://liushihowe.github.io/images/avatar.webp",
+    "jobTitle": "M.S. Student",
+    "affiliation": {
+      "@type": "EducationalOrganization",
+      "name": "Xidian University"
+    },
+    "alumniOf": [
+      { "@type": "EducationalOrganization", "name": "Henan University" }
+    ],
+    "sameAs": [
+      "https://github.com/liushihowe"
+    ],
+    "knowsAbout": [
+      "vision-language models",
+      "fine-grained image-text matching",
+      "CLIP"
+    ]
+  }
+  </script>
+
   <script>
     var FAV_ICONS = {
       dark: 'icons/pixel-crown-monet-dark.svg',
@@ -101,15 +127,17 @@
     (function() {
       var linkLabels         = { project: 'Project', arxiv: 'arXiv', paper: 'Paper', code: 'Code', pdf: 'PDF', video: 'Video' };
       var publicationIconFor = { project: 'paper', arxiv: 'paper', paper: 'paper', pdf: 'paper', code: 'code', video: 'paper' };
-      var iconPaths          = {
-        github  : 'icons/github.svg',
-        wechat  : 'icons/wechat.svg',
-        bilibili: 'icons/bilibili.svg',
-        zhihu   : 'icons/zhihu.svg',
-        paper   : 'icons/paper.svg',
-        code    : 'icons/code.svg'
-      };
-      var svgIcons = {};
+      var SVG_NS             = 'http://www.w3.org/2000/svg';
+
+      function iconInto(a, iconName) {
+        var svg = document.createElementNS(SVG_NS, 'svg');
+        svg.setAttribute('aria-hidden', 'true');
+        svg.setAttribute('focusable', 'false');
+        var use = document.createElementNS(SVG_NS, 'use');
+        use.setAttribute('href', 'icons/sprite.svg#icon-' + iconName);
+        svg.appendChild(use);
+        a.appendChild(svg);
+      }
 
       function appendText(parent, tag, className, text) {
         var el = document.createElement(tag);
@@ -142,7 +170,7 @@
           a.title = s.label;
           a.setAttribute('aria-label', s.label);
           if (s.href.startsWith('http')) { a.target = '_blank'; a.rel = 'noopener'; }
-          a.innerHTML = svgIcons[s.icon] || '';
+          iconInto(a, s.icon);
           socialFrag.appendChild(a);
         });
         document.getElementById('social-links').appendChild(socialFrag);
@@ -203,7 +231,7 @@
                 a.rel    = 'noopener';
                 a.title  = linkLabels[key] || key;
                 a.setAttribute('aria-label', linkLabels[key] || key);
-                a.innerHTML   = svgIcons[publicationIconFor[key]] || svgIcons.paper;
+            iconInto(a, publicationIconFor[key] || 'paper');
             linksEl.appendChild(a);
           });
           if (!linksEl.children.length) linksEl.remove();
@@ -219,20 +247,8 @@
 
       Promise.all([
         fetch('data/profile.json').then(function(r) { return r.json(); }),
-        fetch('data/publications.json').then(function(r) { return r.json(); }),
-        fetch(iconPaths.github).then(function(r) { return r.text(); }),
-        fetch(iconPaths.wechat).then(function(r) { return r.text(); }),
-        fetch(iconPaths.bilibili).then(function(r) { return r.text(); }),
-        fetch(iconPaths.zhihu).then(function(r) { return r.text(); }),
-        fetch(iconPaths.paper).then(function(r) { return r.text(); }),
-        fetch(iconPaths.code).then(function(r) { return r.text(); })
+        fetch('data/publications.json').then(function(r) { return r.json(); })
       ]).then(function(data) {
-        svgIcons.github   = data[2];
-        svgIcons.wechat   = data[3];
-        svgIcons.bilibili = data[4];
-        svgIcons.zhihu    = data[5];
-        svgIcons.paper    = data[6];
-        svgIcons.code     = data[7];
         renderProfile(data[0]);
         renderPublications(data[1], data[0].name);
       });

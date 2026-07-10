@@ -1,0 +1,13 @@
+material-theme-css/配色须知.txt
+material-theme-css/dark-hc.css
+material-theme-css/dark-mc.css
+material-theme-css/light-hc.css
+material-theme-css/light-mc.css
+
+# Icon sources — inlined into icons/sprite.svg; kept locally as source
+icons/github.svg
+icons/code.svg
+icons/paper.svg
+icons/wechat.svg
+icons/bilibili.svg
+icons/zhihu.svg
